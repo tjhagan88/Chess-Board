@@ -42,7 +42,7 @@ public class ChessGame{
 
 		if (!userInput.equals("")) {
 
-			if (userInput.equals("quit")) {
+			if (userInput.equals("quit") || userInput.equals("q")) {
 				System.out.println("\r\nThanks for playing! Goodbye.\r\n");
             	System.exit(0);
 			}
@@ -168,7 +168,7 @@ public class ChessGame{
 	}
 
 	private static int getColArrayElement(String strLoc) {
-		char c = strLoc.charAt(0);
+		char c = strLoc.toUpperCase().charAt(0);
 		int intCol = (int) c;
 		
 		intCol = intCol - 65;
